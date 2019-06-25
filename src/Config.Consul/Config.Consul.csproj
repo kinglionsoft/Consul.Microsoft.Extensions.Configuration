@@ -2,14 +2,14 @@
   <PropertyGroup>
     <PackageId>Consul.Microsoft.Extensions.Configuration</PackageId>
     <PackageTags>consul;configuration;discovery;Microsoft.Extensions.Configuration</PackageTags>
-    <PackageVersion>0.0.2</PackageVersion>
+    <PackageVersion>0.0.3</PackageVersion>
     <Title>Consul.Microsoft.Extensions.Configuration</Title>
     <Description>Consul configuration provider implementation for Microsoft.Extensions.Configuration.</Description>
     <Authors>Andy Dote</Authors>
-    <PackageProjectUrl>https://github.com/pondidum/Consul.Microsoft.Extensions.Configuration/</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/kinglionsoft/Consul.Microsoft.Extensions.Configuration</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/pondidum/Consul.Microsoft.Extensions.Configuration/blob/master/LICENSE.txt</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/pondidum/Consul.Microsoft.Extensions.Configuration</RepositoryUrl>
+    <RepositoryUrl>git://github.com/kinglionsoft/Consul.Microsoft.Extensions.Configuration</RepositoryUrl>
     <AssemblyName>Microsoft.Extensions.Configuration.Consul</AssemblyName>
     <RootNamespace>Microsoft.Extensions.Configuration.Consul</RootNamespace>
   </PropertyGroup>

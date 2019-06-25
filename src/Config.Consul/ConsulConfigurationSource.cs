@@ -1,21 +1,29 @@
-﻿using Consul;
+﻿using System;
+using Consul;
 
 namespace Microsoft.Extensions.Configuration.Consul
 {
-	public class ConsulConfigurationSource : IConfigurationSource
-	{
-		public string Prefix { get; set; }
-		public QueryOptions Options { get; set; }
+    public class ConsulConfigurationSource : IConfigurationSource
+    {
+        public Func<IConsulClient> ClientFactory { get; set; }
+        public string Prefix { get; set; }
+        public QueryOptions Options { get; set; }
 
-		public ConsulConfigurationSource()
-		{
-			Prefix = string.Empty;
-			Options = QueryOptions.Default;
-		}
+        public ConsulConfigurationSource(): 
+            this(string.Empty, QueryOptions.Default,  () => new ConsulClient())
+        {
+        }
 
-		public IConfigurationProvider Build(IConfigurationBuilder builder)
-		{
-			return new ConsulConfigurationProvider(() => new ConsulClient(), Options, Prefix);
-		}
-	}
+        public ConsulConfigurationSource(string prefix, QueryOptions options, Func<IConsulClient> clientFactory)
+        {
+            ClientFactory = clientFactory;
+            Prefix = prefix;
+            Options = options;
+        }
+
+        public IConfigurationProvider Build(IConfigurationBuilder builder)
+        {
+            return new ConsulConfigurationProvider(ClientFactory, Options, Prefix);
+        }
+    }
 }
