@@ -2,7 +2,7 @@
   <PropertyGroup>
     <PackageId>Consul.Microsoft.Extensions.Configuration</PackageId>
     <PackageTags>consul;configuration;discovery;Microsoft.Extensions.Configuration</PackageTags>
-    <PackageVersion>0.0.3</PackageVersion>
+    <PackageVersion>0.0.4</PackageVersion>
     <Title>Consul.Microsoft.Extensions.Configuration</Title>
     <Description>Consul configuration provider implementation for Microsoft.Extensions.Configuration.</Description>
     <Authors>Andy Dote</Authors>
@@ -15,6 +15,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Consul" Version="0.7.2.4" />
